@@ -4,7 +4,7 @@ import Header from "../components/Common/Header";
 import Battery from "../components/Dashboard/Battery";
 import ImageReport from "../components/Dashboard/ImageReport";
 import BlockCustomDevice from "../components/Dashboard/BlockCustomDevice"
-import SlideButton from "../components/Common/SlideButton";
+import SwipeButton from "../components/Common/SwipeButton";
 
 const TwoBlock = styled.div`
     display: flex;
@@ -14,7 +14,7 @@ const TwoBlock = styled.div`
 
 const HelloPage: React.FC = () => {
     const [isNotification, setNotification] = useState(false);
-    const [percentage, setPercentage] = useState(18);
+    const [percentage, setPercentage] = useState(86);
     const [chargeActive, setChargeActive] = useState(true);
 
     return (
@@ -34,7 +34,7 @@ const HelloPage: React.FC = () => {
                 <ImageReport />
             </TwoBlock>
             <BlockCustomDevice />
-            <SlideButton />
+            <SwipeButton />
         </>
     )
 };
