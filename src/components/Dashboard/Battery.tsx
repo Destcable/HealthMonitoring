@@ -27,7 +27,7 @@ const Battery = (props: BatteryProps) => {
     return (
         <BatteryBlock>
             <InfoBattery>
-                <span className="h1"><strong>{props.percentage + "%"}</strong></span>
+                <span className="h2"><strong>{props.percentage + "%"}</strong></span>
                 <br />
                 <span>battery</span>
             </InfoBattery>
