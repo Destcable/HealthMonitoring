@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { ChargeIcon } from "../../icon";
 
 interface ChargeProps { 
     chargeActive: boolean,
@@ -15,7 +16,7 @@ const Charge = (props: ChargeProps) => {
     return( 
         <ChargeBlock>
             {props.chargeActive && 
-                1
+                <ChargeIcon />
             }
         </ChargeBlock>
     )
