@@ -4,6 +4,7 @@ import Header from "../components/Common/Header";
 import Battery from "../components/Dashboard/Battery";
 import ImageReport from "../components/Dashboard/ImageReport";
 import BlockCustomDevice from "../components/Dashboard/BlockCustomDevice"
+import SlideButton from "../components/Common/SlideButton";
 
 const TwoBlock = styled.div`
     display: flex;
@@ -33,6 +34,7 @@ const HelloPage: React.FC = () => {
                 <ImageReport />
             </TwoBlock>
             <BlockCustomDevice />
+            <SlideButton />
         </>
     )
 };
