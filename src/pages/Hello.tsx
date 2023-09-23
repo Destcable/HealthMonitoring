@@ -4,6 +4,7 @@ import Battery from "../components/Dashboard/Battery";
 
 const HelloPage: React.FC = () => {
     const [percentage, setPercentage] = useState(86);
+    const [chargeActive, setChargeActive] = useState(false);
 
     return (
         <>
@@ -15,8 +16,9 @@ const HelloPage: React.FC = () => {
                 <h1>Tracking your heart</h1>
             </div>
 
-            <Battery 
+            <Battery
                 percentage={percentage}
+                chargeActive={chargeActive}
             />
         </>
     )
