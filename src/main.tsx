@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import Header from './components/Common/Header'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <h1>APP Vite</h1> 
+    <Header />
   </React.StrictMode>,
 )
