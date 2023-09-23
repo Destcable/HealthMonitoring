@@ -4,6 +4,9 @@ import Header from './components/Common/Header'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Header />
+    <Header 
+      name='Artem'
+      notification={false}
+    />
   </React.StrictMode>,
 )

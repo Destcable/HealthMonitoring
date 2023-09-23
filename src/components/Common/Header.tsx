@@ -49,17 +49,24 @@ const NotificationStatus = styled.div`
     margin-right: 5px;
 `
 
-const Header: React.FC = () => {
+interface HeaderProps {
+    name: string,
+    notification: boolean
+}
+
+const Header = (props: HeaderProps) => {
     return (
         <HeaderContainer>
             <LogoUser>
                 <img src="/images/users/man.png" />
-                <span>Hello, Jacob!</span>
+                <span>Hello, {props.name}!</span>
             </LogoUser>
             <NotificationBlock>
-                <NotificationStatusWrapper>
-                    <NotificationStatus />
-                </NotificationStatusWrapper>
+                {props.notification === true &&
+                    <NotificationStatusWrapper>
+                        <NotificationStatus />
+                    </NotificationStatusWrapper>
+                }
                 <NotificationWrapper>
                     <NotificationIcon />
                 </NotificationWrapper>
