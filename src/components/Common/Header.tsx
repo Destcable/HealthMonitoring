@@ -1,6 +1,11 @@
 import styled from "@emotion/styled";
 import { NotificationIcon } from "../../icon";
 
+interface HeaderProps {
+    name: string,
+    notification: boolean
+}
+
 const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
@@ -47,11 +52,6 @@ const NotificationStatus = styled.div`
     margin-top: 5px;
     margin-right: 5px;
 `
-
-interface HeaderProps {
-    name: string,
-    notification: boolean
-}
 
 const Header = (props: HeaderProps) => {
     return (
