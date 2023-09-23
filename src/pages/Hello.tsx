@@ -22,7 +22,7 @@ const HelloPage: React.FC = () => {
                 notification={isNotification}
             />
             <div>
-                <h1>Tracking your heart</h1>
+                <span className="h1"><strong>Tracking your heart</strong></span>
             </div>
             <TwoBlock>
                 <Battery
