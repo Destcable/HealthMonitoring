@@ -1,12 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Header from './components/Common/Header'
+import HelloPage from './pages/Hello'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Header 
-      name='Artem'
-      notification={false}
-    />
+    <HelloPage />
   </React.StrictMode>,
 )
