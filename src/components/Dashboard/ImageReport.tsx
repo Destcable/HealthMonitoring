@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 const BlockImage = styled.div`
     img { 
-        width: 190px;
+        height: 210px;
         border-radius: 20px;
     }
 `
