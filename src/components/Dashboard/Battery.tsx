@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Charge from "./Charge";
+import Charge from "./Charge/Charge";
 
 interface BatteryProps {
     percentage: number,
@@ -33,6 +33,7 @@ const Battery = (props: BatteryProps) => {
             </InfoBattery>
             <Charge 
                 chargeActive={props.chargeActive}
+                percentage={props.percentage}
             />
         </BatteryBlock>
     )

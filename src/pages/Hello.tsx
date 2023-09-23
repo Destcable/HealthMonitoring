@@ -3,14 +3,15 @@ import Header from "../components/Common/Header";
 import Battery from "../components/Dashboard/Battery";
 
 const HelloPage: React.FC = () => {
-    const [percentage, setPercentage] = useState(86);
-    const [chargeActive, setChargeActive] = useState(false);
+    const [isNotification, setNotification] = useState(false);
+    const [percentage, setPercentage] = useState(18);
+    const [chargeActive, setChargeActive] = useState(true);
 
     return (
         <>
             <Header
                 name='Artem'
-                notification={false}
+                notification={isNotification}
             />
             <div>
                 <h1>Tracking your heart</h1>
