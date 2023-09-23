@@ -1,6 +1,14 @@
 import React, { useState } from "react";
+import styled from "@emotion/styled";
 import Header from "../components/Common/Header";
 import Battery from "../components/Dashboard/Battery";
+import ImageReport from "../components/Dashboard/ImageReport";
+
+const TwoBlock = styled.div`
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+`
 
 const HelloPage: React.FC = () => {
     const [isNotification, setNotification] = useState(false);
@@ -16,11 +24,13 @@ const HelloPage: React.FC = () => {
             <div>
                 <h1>Tracking your heart</h1>
             </div>
-
-            <Battery
-                percentage={percentage}
-                chargeActive={chargeActive}
-            />
+            <TwoBlock>
+                <Battery
+                    percentage={percentage}
+                    chargeActive={chargeActive}
+                />
+                <ImageReport />
+            </TwoBlock>
         </>
     )
 };
