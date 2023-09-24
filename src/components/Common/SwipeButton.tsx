@@ -24,9 +24,9 @@ const Draggable = styled.div`
 
 `
 
-const SlideButton = () => { 
+const SlideButton = ({onClick}) => { 
     return( 
-        <ButtonWrapper>
+        <ButtonWrapper onClick={onClick}>
             <Draggable>
                 <SmartWatchIcon />
             </Draggable>

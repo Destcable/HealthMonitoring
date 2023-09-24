@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import styled from "@emotion/styled";
 import Header from "../components/Common/Header";
 import Battery from "../components/Dashboard/Battery";
@@ -17,6 +17,17 @@ const HelloPage: React.FC = () => {
     const [percentage, setPercentage] = useState(86);
     const [chargeActive, setChargeActive] = useState(true);
 
+    const useConnectBluetooth = async () => {
+        const device = await navigator.bluetooth.requestDevice({
+            acceptAllDevices: true,
+            optionalServices: ['battery_service'] 
+          });
+
+        const server = await device.gatt;
+
+        console.log(server);
+    }
+
     return (
         <>
             <Header
@@ -34,7 +45,9 @@ const HelloPage: React.FC = () => {
                 <ImageReport />
             </TwoBlock>
             <BlockCustomDevice />
-            <SwipeButton />
+            <SwipeButton  
+                onClick={useConnectBluetooth}
+            />
         </>
     )
 };
